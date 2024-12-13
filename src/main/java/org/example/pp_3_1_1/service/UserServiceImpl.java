@@ -1,5 +1,6 @@
 package org.example.pp_3_1_1.service;
 
+import jakarta.transaction.Transactional;
 import org.example.pp_3_1_1.dao.UserDao;
 import org.example.pp_3_1_1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private final UserDao userDao;
